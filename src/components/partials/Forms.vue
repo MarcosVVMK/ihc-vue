@@ -1,6 +1,6 @@
 <script>
-import PersonalInformationForm from '../forms/PersonalInformationForm.vue'
-import ServiceInformationForm from '../forms/ServiceInformationForm.vue'
+import PersonalInformationForm from '../forms/PersonalInformationForm.vue';
+import ServiceInformationForm from '../forms/ServiceInformationForm.vue';
 
 export default {
   components: {
@@ -9,8 +9,7 @@ export default {
   },
   props: {
     currentStep: {
-      //type: Number,
-      type: 1,
+      type: Number,
       required: true
     }
   }

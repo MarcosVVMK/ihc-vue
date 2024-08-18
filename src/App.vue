@@ -17,7 +17,7 @@ const updateStep = (newStep) => {
   <section class="flex-grow bg-gray-900 min-h-screen">
     <Header :currentStep="currentStep" />
     <main class="flex-grow">
-      <Forms />
+      <Forms :currentStep="currentStep" />
     </main>
     <Footer :currentStep="currentStep" @update-step="updateStep" />
   </section>
