@@ -1,20 +1,27 @@
 <script setup>
-import Header from './components/partials/Header.vue'	
-import Froms from './components/partials/Forms.vue'
-import Footer from './components/partials/Footer.vue'
+import { ref } from 'vue';
+import Header from './components/partials/Header.vue';
+import Forms from './components/partials/Forms.vue';
+import Footer from './components/partials/Footer.vue';
+
+// Definindo a variável currentStep
+const currentStep = ref(1);
+
+// Função para atualizar o currentStep
+const updateStep = (newStep) => {
+  currentStep.value = newStep;
+};
 </script>
 
 <template>
   <section class="flex-grow bg-gray-900 min-h-screen">
-    <Header />
+    <Header :currentStep="currentStep" />
     <main class="flex-grow">
-      <Froms />
+      <Forms />
     </main>
-    <Footer />
+    <Footer :currentStep="currentStep" @update-step="updateStep" />
   </section>
-  
 </template>
 
 <style scoped>
-
 </style>
