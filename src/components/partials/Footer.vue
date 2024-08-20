@@ -31,8 +31,10 @@ export default {
   <footer class="footer">
     <div class="flex justify-between items-center">
       <PreviousButton v-if="currentStep > 1" @previous-step="previousStep" />
-      <NextButton v-if="currentStep < 2" @next-step="nextStep" />
-      <SubmitButton v-if="currentStep === 2" />
+      <div class="ml-auto">
+        <NextButton v-if="currentStep < 3" @next-step="nextStep" />
+        <SubmitButton v-if="currentStep === 3" />
+      </div>
     </div>
   </footer>
 </template>
