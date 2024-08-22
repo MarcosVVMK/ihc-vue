@@ -37,7 +37,7 @@ if (lightSwitches.length > 0) {
 </script>
 
 <template>
-  <section class="flex-grow bg-sky-300 dark:bg-gray-900 min-h-screen">
+  <section class="flex-grow bg-teal-300 dark:bg-gray-900 min-h-screen">
     <Header :currentStep="currentStep" @update-step="updateStep" />
     <main class="flex-grow">
       <Forms :currentStep="currentStep" />
