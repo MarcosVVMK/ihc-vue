@@ -66,11 +66,14 @@ export default {
 }
 
 .breadcrumbs-item:hover {
-  background-color: rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
 .breadcrumbs-item.active a {
   color: white;
+}
+
+.dark .breadcrumbs-item.active {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 </style>
