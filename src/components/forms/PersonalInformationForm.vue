@@ -53,10 +53,10 @@ export default {
         <select name="sexo" id="sexo"
           class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
           required autocomplete="off">
-          <option value="" disabled selected class="bg-gray-900"></option>
-          <option value="masculino" class="bg-gray-900">Masculino</option>
-          <option value="feminino" class="bg-gray-900">Feminino</option>
-          <option value="outro" class="bg-gray-900">Outro</option>
+          <option value="" disabled selected class="bg-sky-300 dark:bg-gray-900"></option>
+          <option value="masculino" class="bg-sky-300 dark:bg-gray-900">Masculino</option>
+          <option value="feminino" class="bg-sky-300 dark:bg-gray-900">Feminino</option>
+          <option value="outro" class="bg-sky-300 dark:bg-gray-900">Outro</option>
         </select>
         <label for="sexo"
           class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Sexo</label>
@@ -65,12 +65,12 @@ export default {
         <select name="raca_cor" id="raca_cor"
           class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
           required autocomplete="off">
-          <option value="" disabled selected class="bg-gray-900"></option>
-          <option value="branca" class="bg-gray-900">Branca</option>
-          <option value="preta" class="bg-gray-900">Preta</option>
-          <option value="parda" class="bg-gray-900">Parda</option>
-          <option value="indigena" class="bg-gray-900">Indígena</option>
-          <option value="outros" class="bg-gray-900">Outros</option>
+          <option value="" disabled selected class="bg-sky-300 dark:bg-gray-900"></option>
+          <option value="branca" class="bg-sky-300 dark:bg-gray-900">Branca</option>
+          <option value="preta" class="bg-sky-300 darkbg-gray-900">Preta</option>
+          <option value="parda" class="bg-sky-300 dark:bg-gray-900">Parda</option>
+          <option value="indigena" class="bg-sky-300 dark:bg-gray-900">Indígena</option>
+          <option value="outros" class="bg-sky-300 dark:bg-gray-900">Outros</option>
         </select>
         <label for="raca_cor"
           class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Raça/Cor</label>

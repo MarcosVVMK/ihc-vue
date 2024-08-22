@@ -28,7 +28,7 @@ export default {
 </script>
 
 <template>
-  <footer class="footer">
+  <footer class="footer bg-sky-300 dark:bg-gray-900">
     <div class="flex justify-between items-center">
       <PreviousButton v-if="currentStep > 1" @previous-step="previousStep" />
       <div class="ml-auto">
@@ -41,7 +41,6 @@ export default {
 
 <style scoped>
 .footer {
-  background-color: #1a202c; /* Cor de fundo cinza escuro */
   padding: 2rem; /* Espaçamento interno */
   position: fixed;
   bottom: 0;
