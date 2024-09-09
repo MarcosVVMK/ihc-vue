@@ -17,7 +17,7 @@ export default {
 
 <template>
   <nav
-      class="flex px-5 py-3 text-gray-700 rounded-lg bg-teal-300 dark:bg-gray-900 dark:border-gray-700"
+      class="flex px-5 py-3 text-gray-700 rounded-lg bg-slate-100 dark:bg-gray-900 dark:border-gray-700"
       aria-label="Breadcrumb">
     <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
       <li :class="['inline-flex items-center breadcrumbs-item', { 'active': currentStep === 1 }]" @click="setStep(1)">
@@ -70,10 +70,11 @@ export default {
 }
 
 .breadcrumbs-item.active a {
+  color: black;
+}
+
+.dark .breadcrumbs-item.active a {
   color: white;
 }
 
-.dark .breadcrumbs-item.active {
-  background-color: rgba(0, 0, 0, 0.1);
-}
 </style>

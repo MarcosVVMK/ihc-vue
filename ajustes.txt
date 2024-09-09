@@ -1,7 +1,7 @@
-1 - Mudar a cor das fontes para preto ( no modo claro )
+1 - Mudar a cor das fontes para preto ( no modo claro ) ✅
 2 - Aumentar o tamanho dos forms ( aproveitar mais o espaço da tela )
 3 - Adicionar mais coisas de acessibilidade ( Lupa, desscrição nos campos e se possivel audio assist)
-4 - Mudar a cor para branco no tema claro ( testar )
+4 - Mudar a cor para branco no tema claro ( testar ) ✅
 5 - Travar navegação quando os campos não estão preenchidos e mostrar mensagem na tela informando usuário
 6 - Fazer uma tela de login 
 7 - Número de prontuário será mostrado para o cliente após finalizar o cadastro.

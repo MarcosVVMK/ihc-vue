@@ -28,7 +28,7 @@ export default {
 </script>
 
 <template>
-  <footer class="footer bg-teal-300 dark:bg-gray-900">
+  <footer class="footer bg-slate-100 dark:bg-gray-900">
     <div class="flex justify-between items-center">
       <PreviousButton v-if="currentStep > 1" @previous-step="previousStep" />
       <div class="ml-auto">

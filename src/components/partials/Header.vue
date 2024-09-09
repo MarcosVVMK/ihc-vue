@@ -15,7 +15,7 @@ export default {
 };
 </script>
 <template>
-  <header class="bg-teal-300 dark:bg-gray-900 p-16 header-container">
+  <header class="bg-slate-100 dark:bg-gray-900 p-16 header-container">
     <div class="logo-container">
       <Logo :currentStep="currentStep" @update-step="$emit('update-step', $event)"  />
     </div>
