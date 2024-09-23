@@ -4,6 +4,6 @@
 4 - Mudar a cor para branco no tema claro ( testar ) ✅
 5 - Travar navegação quando os campos não estão preenchidos e mostrar mensagem na tela informando usuário
 6 - Fazer uma tela de login 
-7 - Número de prontuário será mostrado para o cliente após finalizar o cadastro.
-8 - Colocar um loader após a finalização do cadastro e antes de apresentar o número de prontuário
+7 - Número de prontuário será mostrado para o cliente após finalizar o cadastro.✅
+8 - Colocar um loader após a finalização do cadastro e antes de apresentar o número de prontuário✅
 9 - Adicionar um gerador de senha e adcionar essa senha diretamente no cadastro do cliente.
