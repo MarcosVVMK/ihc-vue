@@ -63,7 +63,7 @@ if (lightSwitches.length > 0) {
 <template>
   <section class="flex flex-col h-screen overflow-hidden bg-slate-100 dark:bg-gray-900">
     <Header :currentStep="currentStep" @update-step="updateStep" />
-    <main class="flex-grow flex items-center justify-center">
+    <main class="flex-grow">
       <Loader v-if="showLoader" />      
       <ServiceNumber v-if="showServiceNumber" />
       <Forms v-else :currentStep="currentStep" v-if="!showLoader"/>
