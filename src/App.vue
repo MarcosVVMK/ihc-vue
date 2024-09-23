@@ -4,11 +4,12 @@ import Header from './components/partials/Header.vue';
 import Forms from './components/partials/Forms.vue';
 import Footer from './components/partials/Footer.vue';
 import ServiceNumber from './components/partials/ServiceNumber.vue';
-import { set } from '@vueuse/core';
+import Loader from './components/partials/Loader.vue';
 
 const currentStep = ref(1);
 const submitForm = ref(false);
 const showServiceNumber = ref(false);
+const showLoader = ref(false);
 
 const updateStep = (newStep) => {
   currentStep.value = newStep;
@@ -26,8 +27,9 @@ const updateSubmitForm = (submit) => {
 
 watch(submitForm, (newValue) => {
   if (newValue) {
+    showLoader.value = newValue;
     setTimeout(() => {
-      submitForm.value = newValue;
+      showLoader.value = false;
       showServiceNumber.value = newValue;
     }, 1000); // Simule uma operação assíncrona de 1 segundo
   }
@@ -62,8 +64,9 @@ if (lightSwitches.length > 0) {
   <section class="flex flex-col h-screen overflow-hidden bg-slate-100 dark:bg-gray-900">
     <Header :currentStep="currentStep" @update-step="updateStep" />
     <main class="flex-grow flex items-center justify-center">
+      <Loader v-if="showLoader" />      
       <ServiceNumber v-if="showServiceNumber" />
-      <Forms v-else :currentStep="currentStep" />
+      <Forms v-else :currentStep="currentStep" v-if="!showLoader"/>
     </main>
     <Footer :currentStep="currentStep" @update-step="updateStep" :submitForm="submitForm" @update-submit-form="updateSubmitForm" />
   </section>

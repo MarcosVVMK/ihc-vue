@@ -1,11 +1,9 @@
 <script setup>
-import { useLoader } from '../../composables/UseLoader.js';
 
-const { isLoading } = useLoader();
 </script>
 
 <template>
-  <div v-if="isLoading" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50">
+  <div class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50">
     <div class="loader"></div>
   </div>
 </template>

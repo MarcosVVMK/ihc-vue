@@ -26,7 +26,14 @@ export default {
       this.$emit('update-step', this.currentStep + 1);
     },
     previousStep() {
-      this.$emit('update-step', this.currentStep - 1);
+      
+      if ( this.submitForm ){
+        this.$emit('update-step', this.currentStep - 0);
+
+      }else{
+        this.$emit('update-step', this.currentStep - 1);
+      }
+
       this.$emit('update-submit-form', false);
       this.submitForm = false;
     },
