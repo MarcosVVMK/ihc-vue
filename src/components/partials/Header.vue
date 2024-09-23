@@ -1,10 +1,11 @@
 <script>
-import Breadcrumbs from "./Breadcrumbs.vue";
-import DarkModeToggle from "./DarkModeToggle.vue";
-import Logo from "./Logo.vue";
+import Logo from './Logo.vue';
+import Lupa from './Lupa.vue';
+import Breadcrumbs from './Breadcrumbs.vue';
+import DarkModeToggle from './DarkModeToggle.vue';
 
 export default {
-  components: {Logo, Breadcrumbs, DarkModeToggle },
+  components: { Logo, Lupa, Breadcrumbs, DarkModeToggle },
   props: {
     currentStep: {
       type: Number,
@@ -19,10 +20,11 @@ export default {
   }
 };
 </script>
+
 <template>
   <header class="bg-slate-100 dark:bg-gray-900 p-16 header-container">
     <div class="logo-container">
-      <Logo :currentStep="currentStep" @update-step="$emit('update-step', $event)"  />
+      <Logo :currentStep="currentStep" @update-step="$emit('update-step', $event)" />
     </div>
     <div class="flex flex-col items-center mb-4">
       <h1 class="text-black dark:text-white text-2xl font-bold mb-2">Sistema de Gerenciamento Hospitalar</h1>
@@ -30,11 +32,14 @@ export default {
     <div class="breadcrumbs-container" v-if="!submitForm">
       <Breadcrumbs :currentStep="currentStep" @update-step="$emit('update-step', $event)" />
     </div>
-    <div class="darkmode-toggle-container">
+    <div class="darkmode-toggle-container flex items-center space-x-4">
       <DarkModeToggle />
+      <Lupa />
     </div>
   </header>
 </template>
+
+
 <style scoped>
 .breadcrumbs-container {
   max-width: 28rem;
