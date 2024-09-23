@@ -65,7 +65,9 @@ if (lightSwitches.length > 0) {
     <Header :currentStep="currentStep" @update-step="updateStep" />
     <main class="flex-grow">
       <Loader v-if="showLoader" />      
-      <ServiceNumber v-if="showServiceNumber" />
+      <div v-if="showServiceNumber" class="flex-grow flex items-center justify-center">
+        <ServiceNumber />
+      </div>
       <Forms v-else :currentStep="currentStep" v-if="!showLoader"/>
     </main>
     <Footer :currentStep="currentStep" @update-step="updateStep" :submitForm="submitForm" @update-submit-form="updateSubmitForm" />
