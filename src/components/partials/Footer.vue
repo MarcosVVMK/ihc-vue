@@ -14,6 +14,11 @@ export default {
     currentStep: {
       type: Number,
       required: true
+    },
+    submitForm: {
+      type: Boolean,
+      required: true,
+      default: false
     }
   },
   methods: {
@@ -22,6 +27,11 @@ export default {
     },
     previousStep() {
       this.$emit('update-step', this.currentStep - 1);
+      this.$emit('update-submit-form', false);
+      this.submitForm = false;
+    },
+    handleSubmit() {
+      this.$emit( 'update-submit-form', true);
     }
   }
 };
@@ -30,10 +40,10 @@ export default {
 <template>
   <footer class="footer bg-slate-100 dark:bg-gray-900">
     <div class="flex justify-between items-center">
-      <PreviousButton v-if="currentStep > 1" @previous-step="previousStep" />
+      <PreviousButton v-if="currentStep > 1" @previous-step="previousStep" @revert-submit="revertSubmit"/>
       <div class="ml-auto">
         <NextButton v-if="currentStep < 3" @next-step="nextStep" />
-        <SubmitButton v-if="currentStep === 3" />
+        <SubmitButton v-if="currentStep === 3 && !submitForm" @handle-submit="handleSubmit"/>
       </div>
     </div>
   </footer>
