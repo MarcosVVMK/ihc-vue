@@ -62,7 +62,7 @@ if (lightSwitches.length > 0) {
 
 <template>
   <section class="flex flex-col h-screen overflow-hidden bg-slate-100 dark:bg-gray-900">
-    <Header :currentStep="currentStep" @update-step="updateStep" />
+    <Header :currentStep="currentStep" @update-step="updateStep" :submitForm="submitForm" @update-submit-form="updateSubmitForm" />
     <main class="flex-grow">
       <Loader v-if="showLoader" />      
       <div v-if="showServiceNumber" class="flex-grow flex items-center justify-center">
@@ -72,7 +72,7 @@ if (lightSwitches.length > 0) {
     </main>
     <Footer :currentStep="currentStep" @update-step="updateStep" :submitForm="submitForm" @update-submit-form="updateSubmitForm" />
   </section>
-</template>
+</template> 
 
 <style scoped>
 </style>

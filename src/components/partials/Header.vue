@@ -10,7 +10,12 @@ export default {
       type: Number,
       required: true,
       default: 1
-    }
+    },
+    submitForm: {
+      type: Boolean,
+      required: true,
+      default: true
+    },
   }
 };
 </script>
@@ -22,7 +27,7 @@ export default {
     <div class="flex flex-col items-center mb-4">
       <h1 class="text-black dark:text-white text-2xl font-bold mb-2">Sistema de Gerenciamento Hospitalar</h1>
     </div>
-    <div class="breadcrumbs-container">
+    <div class="breadcrumbs-container" v-if="!submitForm">
       <Breadcrumbs :currentStep="currentStep" @update-step="$emit('update-step', $event)" />
     </div>
     <div class="darkmode-toggle-container">
